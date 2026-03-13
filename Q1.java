@@ -1,7 +1,7 @@
 public class Q1
 {
     public static void main(String[] args) {
-        String cipherText = "Ittmz Ivnivo qab akpemz";
+        String cipherText = "QEXQP XII CLIHP";
         String message = "";
 
         for (int shiftChar = 0; shiftChar < 26; shiftChar++) {
