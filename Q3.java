@@ -14,7 +14,7 @@ public class Q3 {
             char cipherChar = encryptedMessage.charAt(cipherCharIndex);
             char cipherCharLowercase = Character.toLowerCase(cipherChar);
             for (int i = 65; i < 255; i++) {
-                for (char key = 'a'; key < 'z'; i++) {
+                for (char key = 'a'; key < 'z'; key++) {
                     for (char P = 'a'; P < 'z'; P++) {
                         if ((char)((((P + key + i) % 26) + 65)) == cipherCharLowercase) {
 
