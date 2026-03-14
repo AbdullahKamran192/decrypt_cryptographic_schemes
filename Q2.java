@@ -35,14 +35,27 @@ public class Q2 {
 
 
         for (int encryptedValue = 0; encryptedValue < encryptedMessage.length(); encryptedValue++) {
-            for (int a = 0; a < 26; a++) {
-                for (int b = 0; b < 26; b++) {
-                    for (int c = 0; c < 26; c++) {
-                        for (int key=0; key < 130; key++) {
-                            for (int charValue=65; charValue < 130; charValue++) {
-                                char encryptedChar = encryptCaesarPlus(new int[] {a, b, c}, (char)key, (char)charValue);
-                                if (encryptedMessage.charAt(encryptedValue) == encryptedChar) {
-                                    System.out.println(a + " " + b + " " + c + " " + key);
+        }
+
+        int final_a;
+        int final_b;
+        int final_c;
+        int final_key;
+
+        for (int a = 0; a < 26; a++) {
+            for (int b = 0; b < 26; b++) {
+                for (int c = 0; c < 26; c++) {
+                    for (int key=0; key < 130; key++) {
+                        for (int charValue=65; charValue < 130; charValue++) {
+                            char encryptedChar = encryptCaesarPlus(new int[] {a, b, c}, (char)key, (char)charValue);
+                            for (int encryptedValue = 0; encryptedValue < encryptedMessage.length(); encryptedValue++) {
+                                if ((encryptCaesarPlus(new int[] {a, b, c}, (char)key, (char)charValue)) != encryptedChar) {
+                                    break;
+                                } else {
+                                    final_a = a;
+                                    final_b = b;
+                                    final_c = c;
+                                    final_key = key;
                                 }
                             }
                         }
