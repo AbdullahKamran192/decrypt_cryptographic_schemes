@@ -48,6 +48,8 @@ public class Q4_reattempt {
 
         System.out.println("password: " + password + " hashedValue: " + hashedValue);
 
+
+        // Example password and hash.
         String examplePassword = getSecurePassword("contemplates", "FZ23sDK0NcUi");
         System.out.println(" Password -> " + examplePassword);
         if (examplePassword.equals("7a8a1ef53704c6ba6bee1c0ac8a99c74b17d59228297d6d877a36b9cb836221e")) {
