@@ -60,7 +60,9 @@ public class Q5 {
                 }
 
                 for (int i = 0; i < potentialSubsLetters.size(); i++) {
-                    
+                    for (int subedLettersIndex = 0; subedLettersIndex < potentialSubsLetters.get(i).length; subedLettersIndex++) {
+                        
+                    }
                 }
                 
             }
